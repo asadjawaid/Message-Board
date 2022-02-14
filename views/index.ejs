@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1 id="header-title"><%= title %></h1>
+    <a href="/new" id="add-msg-btn">Add a new message!</a>
+
+    <div class="container">
+      <% messages.forEach(message=> { %>
+        <div class="message-div">
+          <h2><%= message.title %></h2>
+          <p>Message: <%= message.text %></p>
+          <p>By: <%= message.user %></p>
+          <p>Date Added: <%= message.added %></p>
+        </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
